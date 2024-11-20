@@ -1,6 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home_content_page.dart';
+import 'package:flutter_application_1/login_screen.dart';
+import 'package:flutter_application_1/register_screen.dart';
+import 'package:flutter_application_1/reset_password_screen.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final list = [
+    const HomeContentScreen(),
+    RegisterScreen(),
+    ResetPasswordScreen(),
+    LoginScreen()
+  ];
+  int _selectedIndex = 0;
+  void _onBarItemClick(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,83 +38,45 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DropdownButtonFormField<String>(
-              decoration: InputDecoration(labelText: 'Especialidades'),
-              items: ['Fisioterapeuta', 'Nutricionista', 'Fonoaudiólogo']
-                  .map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (newValue) {},
-            ),
-            DropdownButtonFormField<String>(
-              decoration: InputDecoration(labelText: 'Estado'),
-              items: ['São Paulo'].map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (newValue) {},
-            ),
-            DropdownButtonFormField<String>(
-              decoration: InputDecoration(labelText: 'Cidade'),
-              items: [
-                'São Caetano do Sul',
-                'São Paulo',
-                'São Bernardo do Campo',
-                'Santo André'
-              ].map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (newValue) {},
-            ),
-            SizedBox(height: 20),
-            Card(
-              child: ListTile(
-                leading: Icon(Icons.person),
-                title: Text('Dr. Carlos - Fisioterapeuta'),
-                subtitle: Text(
-                    'São Caetano do Sul - São Paulo\n15 anos de experiência\nAtendimento: Domiciliar ou Consultório'),
-                trailing: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Mais Informações'),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: list[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        onTap: _onBarItemClick,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.teal,
+        items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
+            icon: Icon(
+              Icons.message,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(Icons.message),
             label: 'Messages',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(Icons.search),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],
-        selectedItemColor: Colors.teal,
       ),
     );
   }

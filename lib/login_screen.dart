@@ -10,22 +10,22 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset('assets/logo.png',
+              Image.asset('assets/images/logo.png',
                   height: 100), // Adicione o logo aqui
               SizedBox(height: 20),
-              Text(
+              const Text(
                 'Saúde Fácil',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'E-mail',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Senha',

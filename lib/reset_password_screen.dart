@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widget/logo_widget.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   @override
@@ -13,14 +14,14 @@ class ResetPasswordScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/logo.png', height: 100), // Adicione o logo aqui
+            LogoWidget(size: 100), // Adicione o logo aqui
             SizedBox(height: 20),
-            Text(
+            const Text(
               'Saúde Fácil',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
-            TextField(
+            const SizedBox(height: 20),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Nova Senha',
                 border: OutlineInputBorder(),
@@ -28,14 +29,14 @@ class ResetPasswordScreen extends StatelessWidget {
               obscureText: true,
             ),
             SizedBox(height: 20),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Confirme a Nova Senha',
                 border: OutlineInputBorder(),
               ),
               obscureText: true,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Ação do botão Confirmar

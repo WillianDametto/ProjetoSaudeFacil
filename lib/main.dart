@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widget/logo_widget.dart';
 import 'login_screen.dart';
 import 'home_page.dart';
 import 'register_screen.dart';
 import 'reset_password_screen.dart';
 
 void main() {
-  runApp(SaudeFacilApp());
+  runApp(const SaudeFacilApp());
 }
 
 class SaudeFacilApp extends StatelessWidget {
+  const SaudeFacilApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginScreen(),
+        '/': (context) => const LoginScreen(),
         '/home': (context) => HomePage(),
         '/register': (context) => RegisterScreen(),
         '/reset_password': (context) => ResetPasswordScreen(),
@@ -24,6 +27,8 @@ class SaudeFacilApp extends StatelessWidget {
 }
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,53 +38,53 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset('assets/logo.png',
-                  height: 100), // Adicione o logo aqui
-              SizedBox(height: 20),
-              Text(
+              LogoWidget(size: 100), // Adicione o logo aqui
+              const SizedBox(height: 20),
+              const Text(
                 'Saúde Fácil',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'E-mail',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Senha',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Navegar para a tela principal após o login
                   Navigator.pushNamed(context, '/home');
                 },
-                child: Text('Acessar'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal, // Cor do botão
                 ),
+                child: const Text('Acessar'),
               ),
               TextButton(
                 onPressed: () {
                   // Navegar para a tela de recuperação de senha
                   Navigator.pushNamed(context, '/reset_password');
                 },
-                child: Text('Recuperar senha'),
+                child: const Text('Recuperar senha'),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
                   // Navegar para a tela de cadastro
                   Navigator.pushNamed(context, '/register');
                 },
-                child: Text('Não tem uma conta? Clique aqui para criar uma'),
+                child:
+                    const Text('Não tem uma conta? Clique aqui para criar uma'),
               ),
             ],
           ),
