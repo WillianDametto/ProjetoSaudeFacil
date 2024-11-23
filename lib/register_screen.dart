@@ -20,6 +20,13 @@ class RegisterScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const TextField(
+              decoration: InputDecoration(
+                labelText: 'Confirmar E-mail',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Senha',
@@ -34,7 +41,7 @@ class RegisterScreen extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 10),
+            /*const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'CPF',
@@ -55,10 +62,10 @@ class RegisterScreen extends StatelessWidget {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
-                );
+                )
               }).toList(),
               onChanged: (newValue) {},
-            ),
+            ),;*/
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
@@ -66,34 +73,34 @@ class RegisterScreen extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 10),
+            /*const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Rua',
                 border: OutlineInputBorder(),
               ),
-            ),
-            const SizedBox(height: 10),
+            ),*/
+            /*const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Número Residencial',
                 border: OutlineInputBorder(),
               ),
-            ),
-            const SizedBox(height: 10),
-            const TextField(
+            ),*/
+            /*const SizedBox(height: 10),*/
+            /*const TextField(
               decoration: InputDecoration(
                 labelText: 'Complemento',
                 border: OutlineInputBorder(),
               ),
-            ),
-            const SizedBox(height: 10),
+            ),*/
+            /*const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
-                labelText: 'Contato',
+                labelText: 'Celular',
                 border: OutlineInputBorder(),
               ),
-            ),
+            ),*/
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {

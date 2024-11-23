@@ -11,12 +11,13 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+//Barra de atalho no final da pagina
 class _HomePageState extends State<HomePage> {
   final list = [
     const HomeContentScreen(),
-    RegisterScreen(),
-    ResetPasswordScreen(),
-    LoginScreen()
+    HomeContentScreen(),
+    HomeContentScreen(),
+    HomeContentScreen()
   ];
   int _selectedIndex = 0;
   void _onBarItemClick(int index) {
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
               color: Colors.grey,
             ),
             activeIcon: Icon(Icons.person),
-            label: 'Profile',
+            label: 'Conta',
           ),
         ],
       ),

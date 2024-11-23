@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/reset_email_screen.dart';
 import 'package:flutter_application_1/widget/logo_widget.dart';
 import 'login_screen.dart';
 import 'home_page.dart';
@@ -20,6 +21,7 @@ class SaudeFacilApp extends StatelessWidget {
         '/': (context) => const LoginScreen(),
         '/home': (context) => HomePage(),
         '/register': (context) => RegisterScreen(),
+        '/reset_email': (context) => ResetEmailScreen(),
         '/reset_password': (context) => ResetPasswordScreen(),
       },
     );
@@ -73,7 +75,7 @@ class LoginScreen extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   // Navegar para a tela de recuperação de senha
-                  Navigator.pushNamed(context, '/reset_password');
+                  Navigator.pushNamed(context, '/reset_email');
                 },
                 child: const Text('Recuperar senha'),
               ),
