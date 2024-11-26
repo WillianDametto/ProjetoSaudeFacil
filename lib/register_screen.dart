@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastrar-se'),
+        title: const Text('Cadastrar-se'),
         backgroundColor: Colors.teal,
       ),
       body: Padding(
@@ -107,10 +109,10 @@ class RegisterScreen extends StatelessWidget {
                 // Ação do botão Confirmar
                 Navigator.pushNamed(context, '/');
               },
-              child: Text('Confirmar'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
               ),
+              child: const Text('Confirmar'),
             ),
           ],
         ),

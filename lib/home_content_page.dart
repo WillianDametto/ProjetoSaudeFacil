@@ -11,7 +11,7 @@ class HomeContentScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           DropdownButtonFormField<String>(
-            decoration: InputDecoration(labelText: 'Especialidades'),
+            decoration: const InputDecoration(labelText: 'Especialidades'),
             items: ['Fisioterapeuta', 'Nutricionista', 'Fonoaudiólogo']
                 .map((String value) {
               return DropdownMenuItem<String>(
@@ -23,7 +23,7 @@ class HomeContentScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           DropdownButtonFormField<String>(
-            decoration: InputDecoration(labelText: 'Estado'),
+            decoration: const InputDecoration(labelText: 'Estado'),
             items: ['São Paulo'].map((String value) {
               return DropdownMenuItem<String>(
                 value: value,
@@ -34,7 +34,7 @@ class HomeContentScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           DropdownButtonFormField<String>(
-            decoration: InputDecoration(labelText: 'Cidade'),
+            decoration: const InputDecoration(labelText: 'Cidade'),
             items: [
               'São Caetano do Sul',
               'São Paulo',
@@ -50,7 +50,7 @@ class HomeContentScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           DropdownButtonFormField<String>(
-            decoration: InputDecoration(labelText: 'Atendimento'),
+            decoration: const InputDecoration(labelText: 'Atendimento'),
             items: [
               'Domiciliar',
               'Consultório',
@@ -65,13 +65,13 @@ class HomeContentScreen extends StatelessWidget {
           const SizedBox(height: 20),
           Card(
             child: ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Dr. Carlos - Fisioterapeuta'),
-              subtitle: Text(
+              leading: const Icon(Icons.person),
+              title: const Text('Dr. Carlos - Fisioterapeuta'),
+              subtitle: const Text(
                   'São Caetano do Sul - São Paulo\n15 anos de experiência\nAtendimento: Domiciliar ou Consultório'),
               trailing: ElevatedButton(
                 onPressed: () {},
-                child: Text('Mais Informações'),
+                child: const Text('Mais Informações'),
               ),
             ),
           ),

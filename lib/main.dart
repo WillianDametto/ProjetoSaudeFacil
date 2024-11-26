@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/reset_email_screen.dart';
 import 'package:flutter_application_1/widget/logo_widget.dart';
-import 'login_screen.dart';
 import 'home_page.dart';
 import 'register_screen.dart';
 import 'reset_password_screen.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 void main() {
   runApp(const SaudeFacilApp());
@@ -21,10 +18,10 @@ class SaudeFacilApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginScreen(),
-        '/home': (context) => HomePage(),
-        '/register': (context) => RegisterScreen(),
-        '/reset_email': (context) => ResetEmailScreen(),
-        '/reset_password': (context) => ResetPasswordScreen(),
+        '/home': (context) => const HomePage(),
+        '/register': (context) => const RegisterScreen(),
+        '/reset_email': (context) => const ResetEmailScreen(),
+        '/reset_password': (context) => const ResetPasswordScreen(),
       },
     );
   }

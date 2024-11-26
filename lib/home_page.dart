@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_content_page.dart';
-import 'package:flutter_application_1/login_screen.dart';
-import 'package:flutter_application_1/register_screen.dart';
-import 'package:flutter_application_1/reset_password_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,9 +12,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final list = [
     const HomeContentScreen(),
-    HomeContentScreen(),
-    HomeContentScreen(),
-    HomeContentScreen()
+    const HomeContentScreen(),
+    const HomeContentScreen(),
+    const HomeContentScreen()
   ];
   int _selectedIndex = 0;
   void _onBarItemClick(int index) {
@@ -30,11 +27,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Saúde Fácil'),
+        title: const Text('Saúde Fácil'),
         backgroundColor: Colors.teal,
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications),
             onPressed: () {},
           ),
         ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +14,7 @@ class LoginScreen extends StatelessWidget {
             children: <Widget>[
               Image.asset('assets/images/logo.png',
                   height: 100), // Adicione o logo aqui
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Text(
                 'Saúde Fácil',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -32,31 +34,32 @@ class LoginScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Navegar para a tela principal após o login
                   Navigator.pushNamed(context, '/home');
                 },
-                child: Text('Acessar'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal, // Cor do botão
                 ),
+                child: const Text('Acessar'),
               ),
               TextButton(
                 onPressed: () {
                   // Navegar para a tela de recuperação de senha
                   Navigator.pushNamed(context, '/reset_password');
                 },
-                child: Text('Recuperar senha'),
+                child: const Text('Recuperar senha'),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
                   // Navegar para a tela de cadastro
                   Navigator.pushNamed(context, '/register');
                 },
-                child: Text('Não tem uma conta? Clique aqui para criar uma'),
+                child:
+                    const Text('Não tem uma conta? Clique aqui para criar uma'),
               ),
             ],
           ),

@@ -4,19 +4,23 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() {
-  runApp(SaudeFacilApp());
+  runApp(const SaudeFacilApp());
 }
 
 class SaudeFacilApp extends StatelessWidget {
+  const SaudeFacilApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
     );
   }
 }
 
 class LoginController extends StatefulWidget {
+  const LoginController({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -46,7 +50,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Usuários'),
+        title: const Text('Usuários'),
       ),
       body: ListView.builder(
         itemCount: usuarios.length,

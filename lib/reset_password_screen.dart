@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widget/logo_widget.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
+  const ResetPasswordScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recuperar Senha'),
+        title: const Text('Recuperar Senha'),
         backgroundColor: Colors.teal,
       ),
       body: Padding(
@@ -15,7 +17,7 @@ class ResetPasswordScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LogoWidget(size: 100), // Adicione o logo aqui
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             const Text(
               'Saúde Fácil',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -28,7 +30,7 @@ class ResetPasswordScreen extends StatelessWidget {
               ),
               obscureText: true,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Confirme a Nova Senha',
@@ -42,10 +44,10 @@ class ResetPasswordScreen extends StatelessWidget {
                 // Ação do botão Confirmar
                 Navigator.pushNamed(context, '/');
               },
-              child: Text('Confirmar'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
               ),
+              child: const Text('Confirmar'),
             ),
           ],
         ),
