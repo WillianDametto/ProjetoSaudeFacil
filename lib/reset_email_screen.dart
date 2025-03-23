@@ -17,20 +17,22 @@ class ResetEmailScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LogoWidget(size: 100), // Adicione o logo aqui
-            const SizedBox(height: 20),
             const Text(
               'Saúde Fácil',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const Text(('Informe o e-mail cadastrado para recuperar a senha.')),
+            const SizedBox(height: 20, width: 270),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'E-mail',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
               obscureText: true,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20, width: 270),
             /*const TextField(
               decoration: InputDecoration(
                 labelText: 'Confirme e-mail',
@@ -45,7 +47,7 @@ class ResetEmailScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/reset_password');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
+                backgroundColor: const Color.fromRGBO(92, 198, 186, 100),
               ),
               child: const Text('Confirmar'),
             ),

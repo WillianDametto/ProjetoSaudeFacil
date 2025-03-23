@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widget/logo_widget.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
+//arrumar depois home information page
 
   @override
   Widget build(BuildContext context) {
@@ -13,104 +15,124 @@ class RegisterScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: [
+          children: <Widget>[
+            LogoWidget(size: 100), // Adicione o logo aqui
+            const SizedBox(height: 20),
+            const Text(
+              'Cadastro',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'E-mail',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Confirmar E-mail',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
             ),
             const SizedBox(height: 10),
             const TextField(
+              keyboardType: TextInputType.number,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Senha',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
             ),
             const SizedBox(height: 10),
             const TextField(
+              keyboardType: TextInputType.number,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Confirme a Senha',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
             ),
-            /*const SizedBox(height: 10),
+            const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'CPF',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'CEP',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
             ),
             const SizedBox(height: 10),
-            DropdownButtonFormField<String>(
-              decoration: const InputDecoration(labelText: 'Estado'),
-              items: ['São Paulo'].map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                )
-              }).toList(),
-              onChanged: (newValue) {},
-            ),;*/
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Estado',
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
+              ),
+            ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Cidade',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
             ),
-            /*const SizedBox(height: 10),
+            const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Rua',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-            ),*/
-            /*const SizedBox(height: 10),
+            ),
+            const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Número Residencial',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-            ),*/
-            /*const SizedBox(height: 10),*/
-            /*const TextField(
+            ),
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Complemento',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-            ),*/
-            /*const SizedBox(height: 10),
+            ),
+            const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Celular',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
               ),
-            ),*/
+            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Ação do botão Confirmar
-                Navigator.pushNamed(context, '/');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
+                backgroundColor: const Color.fromRGBO(92, 198, 186, 100),
               ),
               child: const Text('Confirmar'),
             ),

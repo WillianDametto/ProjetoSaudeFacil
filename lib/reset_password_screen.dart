@@ -22,19 +22,23 @@ class ResetPasswordScreen extends StatelessWidget {
               'Saúde Fácil',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20, width: 270),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Nova Senha',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
               obscureText: true,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20, width: 270),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Confirme a Nova Senha',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
               ),
               obscureText: true,
             ),
@@ -45,7 +49,7 @@ class ResetPasswordScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
+                backgroundColor: const Color.fromRGBO(92, 198, 186, 100),
               ),
               child: const Text('Confirmar'),
             ),

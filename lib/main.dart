@@ -45,29 +45,35 @@ class LoginScreen extends StatelessWidget {
                 'Saúde Fácil',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 20, width: 270),
               const TextField(
                 decoration: InputDecoration(
                   labelText: 'E-mail',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(12)), // Arredondamento
+                  ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 20, width: 270),
               const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Senha',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 20, width: 270),
               ElevatedButton(
                 onPressed: () {
                   // Navegar para a tela principal após o login
                   Navigator.pushNamed(context, '/home');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.teal, // Cor do botão
+                  backgroundColor:
+                      const Color.fromRGBO(92, 198, 186, 100), // Cor do botão
                 ),
                 child: const Text('Acessar'),
               ),
