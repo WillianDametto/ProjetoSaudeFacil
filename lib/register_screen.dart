@@ -3,7 +3,6 @@ import 'package:flutter_application_1/widget/logo_widget.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
-//arrumar depois home information page
 
   @override
   Widget build(BuildContext context) {
@@ -130,6 +129,7 @@ class RegisterScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Ação do botão Confirmar
+                Navigator.pushNamed(context, '/');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromRGBO(92, 198, 186, 100),

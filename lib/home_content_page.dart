@@ -280,11 +280,13 @@ class HomeContentScreen extends StatelessWidget {
               subtitle: const Text(
                   'São Caetano do Sul - São Paulo\n15 anos de experiência\nAtendimento: Domiciliar ou Consultório'),
               trailing: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Mais Informações'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/HomeInformation');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromRGBO(92, 198, 186, 100),
                 ),
+                child: const Text('Mais Informações'),
               ),
             ),
           ),

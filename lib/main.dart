@@ -4,6 +4,7 @@ import 'package:flutter_application_1/widget/logo_widget.dart';
 import 'home_page.dart';
 import 'register_screen.dart';
 import 'reset_password_screen.dart';
+import 'HomeInformation.dart';
 
 void main() {
   runApp(const SaudeFacilApp());
@@ -22,6 +23,7 @@ class SaudeFacilApp extends StatelessWidget {
         '/register': (context) => const RegisterScreen(),
         '/reset_email': (context) => const ResetEmailScreen(),
         '/reset_password': (context) => const ResetPasswordScreen(),
+        '/HomeInformation': (context) => const HomeInformation(),
       },
     );
   }
